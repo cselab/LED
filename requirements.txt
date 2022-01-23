@@ -1,0 +1,14 @@
+torch
+matplotlib
+scipy
+psutil
+tqdm
+hickle
+scikit-learn
+tabulate
+opencv-python
+nvidia-ml-py3
+adabelief_pytorch
+GPUtil
+pysindy
+cvxpy
