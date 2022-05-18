@@ -28,7 +28,7 @@ These scripts train and test the respective networks or dimensionality reduction
 # Data availability
 
 Scripts to generate the data for the FHN and the KS equations are provided in the ./Data folder.
-Data for the Navier-Stokes flow past a cylinder have been generated using the in-house software library, [CubismUP-2D](https://github.com/novatig/CubismUP_2D).
+Data for the Navier-Stokes flow past a cylinder have been generated using the in-house software library, [CubismUP-2D](https://github.com/novatig/CubismUP_2D) (to be made public soon).
 Due to the large data size, the data for this application are not uploaded here.
 
 # Dependencies (python 3.8)
