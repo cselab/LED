@@ -1,3 +1,5 @@
+__pycache__/
+*.pyc
 
 
 **/*.pkl.*
@@ -34,4 +36,3 @@ __pycache__/
 
 
 *.DS_Store
-*.pyc
