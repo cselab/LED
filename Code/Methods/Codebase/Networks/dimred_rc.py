@@ -135,7 +135,7 @@ class dimred_rc():
             assert params_autoencoder["latent_state_dim"] > 0
             self.model_autoencoder = crnn.crnn(params_autoencoder)
             self.model_autoencoder.model.printModuleList()
-            # self.loadAutoencoderModel()
+            self.loadAutoencoderModel()
             self.gpu = self.model_autoencoder.gpu
 
         elif self.params["dimred_method"] == "pca":
@@ -703,8 +703,11 @@ class dimred_rc():
                 i = out
                 i = np.reshape(i, (-1, 1))
             elif "teacher_forcing" in testing_mode:
-                input_t = data_input[0, t]
-                i = i[..., np.newaxis]
+                input_t = data_input[0, t].unsqueeze(0).unsqueeze(0)
+                input_t = self.model_autoencoder.encode(input_t)
+                input_t = input_t[0, 0]
+                # i = i[..., np.newaxis]
+                i = np.reshape(input_t, (-1, 1))
             else:
                 raise ValueError(
                     "[dimred_rc] Testing mode {:} not recognized.".format(

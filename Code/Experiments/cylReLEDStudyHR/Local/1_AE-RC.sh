@@ -126,7 +126,7 @@ rc_noise_level_per_mill=1
 
 
 # 
-# CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python3 RUN.py cnn_rc \
+# CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python3 RUN.py dimred_rc \
 # --mode $mode \
 # --system_name $system_name \
 # --cudnn_benchmark $cudnn_benchmark \
@@ -216,7 +216,7 @@ rc_noise_level_per_mill=1
 # --multiscale_macro_steps_list 0 \
 # --multiscale_macro_steps_list 2 \
 # --multiscale_macro_steps_list 100 \
-# cnn_rc \
+# dimred_rc \
 # --mode $mode \
 # --system_name $system_name \
 # --cudnn_benchmark $cudnn_benchmark \

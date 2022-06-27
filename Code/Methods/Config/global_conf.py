@@ -21,31 +21,31 @@ HIPPO = False
 if global_params.cluster == 'euler':
     print("[Config] RUNNING IN EULER CLUSTER.")
     SCRATCH = os.environ['SCRATCH']
-    project_path = SCRATCH + "/STF/Code"
+    project_path = SCRATCH + "/LED/Code"
     global_params.scratch_path = SCRATCH
 
 elif global_params.cluster == 'barry':
     print("[Config] RUNNING IN BARRY CLUSTER.")
     # SCRATCH = os.environ['SCRATCH']
     SCRATCH = "/scratch/pvlachas"
-    project_path = SCRATCH + "/STF/Code"
+    project_path = SCRATCH + "/LED/Code"
     global_params.scratch_path = SCRATCH
 
 elif global_params.cluster == 'daint':
     print("[Config] RUNNING IN DAINT CLUSTER.")
     SCRATCH = os.environ['SCRATCH']
-    project_path = SCRATCH + "/STF/Code"
+    project_path = SCRATCH + "/LED/Code"
     global_params.scratch_path = SCRATCH
 
     # PROJECTFOLDER = "/project/s929/pvlachas"
-    # project_path = PROJECTFOLDER + "/STF/Code"
+    # project_path = PROJECTFOLDER + "/LED/Code"
 
 elif global_params.cluster == 'local':
     # Running in the local repository, pick whether you are loading data-sets from the hippo database, or using a local data folder.
     if HIPPO:
         print("[Config] DATA LOADING FROM HIPPO.")
         HOME = os.environ['HOME']
-        project_path = HOME + "/hippo/STF/Code"
+        project_path = HOME + "/hippo/LED/Code"
         global_params.scratch_path = HOME
 
     else:
@@ -67,7 +67,7 @@ else:
     if HIPPO:
         print("[Config] DATA LOADING FROM HIPPO.")
         HOME = os.environ['HOME']
-        project_path = HOME + "/hippo/STF/Code"
+        project_path = HOME + "/hippo/LED/Code"
     else:
         print("[Config] RUNNING IN LOCAL REPOSITORY.")
         config_path = os.path.dirname(os.path.abspath(__file__))

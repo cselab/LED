@@ -141,7 +141,7 @@ print(len(hyper_params_dictionary_list))
 #####################################################################
 # RUNNING ALL
 #####################################################################
-PATH = "/users/pvlachas/STF/Code/Methods/"
+PATH = "/users/pvlachas/LED/Code/Methods/"
 model_name = "crnn"
 
 

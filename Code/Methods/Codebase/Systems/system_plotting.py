@@ -4,8 +4,9 @@
 """
 #!/usr/bin/env python
 
-from .. import Utils as utils
 import warnings
+from .KS import utils_plotting_ks as utils_plotting_ks
+from .cylRe import utils_cylRe_plotting as utils_cylRe_plotting
 
 ######################################################
 ## PLOTTING UTILITIES FOR EACH SYSTEM
@@ -18,7 +19,6 @@ def plotSystem(model, results, set_name, testing_mode):
     #     return 0
 
     if model.system_name in ["KSGP64L22", "KSGP64L22Large"]:
-        from .KS import utils_plotting_ks as utils_plotting_ks
         utils_plotting_ks.plotStateDistributionsSystemKS(
             model, results, set_name, testing_mode)
 
@@ -27,7 +27,7 @@ def plotSystem(model, results, set_name, testing_mode):
             "cylRe100HR_demo", "cylRe1000HR_demo", "cylRe100HRDt005",
             "cylRe1000HRDt005", "cylRe1000HRLarge",
     ]:
-        from .cylRe import utils_cylRe_plotting as utils_cylRe_plotting
+        
         # utils_cylRe_plotting.plotDrugCoefficient(model, results, set_name, testing_mode)
         utils_cylRe_plotting.plotSystemCUP2D(model, results, set_name, testing_mode)
 

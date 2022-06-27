@@ -21,13 +21,13 @@ Similar scripts are provided for the KS equation, and the Navier-Stokes flow pas
 
 # Dependencies (python 3.8)
 
-1. The code has been tested in python 3.8. Create virtual environment
+1. The code has been tested in python 3.8 & python3.9. Create virtual environment
 ```
-python3.8 -m venv venv-led
+python3 -m venv venv-led
 ```
 2. Activate virtual environment
 ```
-source $HOME/venv-led/bin/activate
+source ./venv-led/bin/activate
 ```
 3. Install dependencies
 ```

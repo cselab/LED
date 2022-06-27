@@ -12,12 +12,12 @@
 # SYSTEM_NAME=cylRe100HRDt005
 # SYSTEM_NAME=cylRe1000HRDt005
 
-# mkdir -p /Users/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/ 
-# rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/dt.txt /Users/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/ 
+# mkdir -p /Users/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/ 
+# rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/dt.txt /Users/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/ 
 
 
 
-# cd ${HOME}/STF/Code/PostProcessing/LED
+# cd ${HOME}/LED/Code/PostProcessing/LED
 
 # ################################################
 # ### Synchronize git (push local)
@@ -38,7 +38,7 @@
 
 
 # ssh daint << 'EOF'
-# 	cd ${HOME}/STF/Code/PostProcessing/LED
+# 	cd ${HOME}/LED/Code/PostProcessing/LED
 
 # 	git stash save --keep-index
 # 	git stash drop
@@ -96,10 +96,10 @@ for SYSTEM_NAME in cylRe100HR cylRe1000HR
 do
     REMOTE_EXPERIMENT_NAME=None
     LOCAL_EXPERIMENT_NAME=Experiment_Daint_Large
-    mkdir -p /Users/pvlachas/STF/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
-    # rsync -mzarvP daint:/users/pvlachas/STF/Code/PostProcessing/LED/${SYSTEM_NAME}/${REMOTE_EXPERIMENT_NAME}/Data/ /Users/pvlachas/STF/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
+    mkdir -p /Users/pvlachas/LED/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
+    # rsync -mzarvP daint:/users/pvlachas/LED/Code/PostProcessing/LED/${SYSTEM_NAME}/${REMOTE_EXPERIMENT_NAME}/Data/ /Users/pvlachas/LED/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
 
-    cd ${HOME}/STF/Code/PostProcessing/LED
+    cd ${HOME}/LED/Code/PostProcessing/LED
 
     # python3 F2_field_wrt_models.py ${SYSTEM_NAME} 0 1 ${LOCAL_EXPERIMENT_NAME}
     # python3 F3_field_wrt_multiscale_ratio.py ${SYSTEM_NAME} 0 1 ${LOCAL_EXPERIMENT_NAME}

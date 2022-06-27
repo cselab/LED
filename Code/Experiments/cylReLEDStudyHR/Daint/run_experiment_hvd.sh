@@ -6,7 +6,7 @@ SYSTEM_NAME=cylReLEDStudyHR
 ################################################
 ### Synchronize git (push local)
 ################################################
-cd $HOME/STF
+cd $HOME/LED
 git add .
 git commit -m "running system (HOROVOD)"
 git push
@@ -17,7 +17,7 @@ git push
 ################################################
 
 ssh daint << 'EOF'
-	cd ${HOME}/STF
+	cd ${HOME}/LED
 	git stash save --keep-index
 	git stash drop
 	git pull
@@ -25,13 +25,13 @@ ssh daint << 'EOF'
 	SYSTEM_NAME=cylReLEDStudyHR
 
 	echo "PREPARING JOB..."
-	mkdir -p /scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/Logs
+	mkdir -p /scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/Logs
 
-	# cd ${HOME}/STF/Code/Experiments/${SYSTEM_NAME}/Daint/Horovod
+	# cd ${HOME}/LED/Code/Experiments/${SYSTEM_NAME}/Daint/Horovod
 
     # sbatch HVD_debug.sh
 
-    # cd ${HOME}/STF/Code/Experiments/${SYSTEM_NAME}/Daint/Horovod100
+    # cd ${HOME}/LED/Code/Experiments/${SYSTEM_NAME}/Daint/Horovod100
 
     # sbatch HVD_AECNN_1.sh
     # sbatch HVD_AECNN_2.sh
@@ -41,7 +41,7 @@ ssh daint << 'EOF'
     # sbatch HVD_AECNN_6.sh
 
 
-    cd ${HOME}/STF/Code/Experiments/${SYSTEM_NAME}/Daint/Horovod1000
+    cd ${HOME}/LED/Code/Experiments/${SYSTEM_NAME}/Daint/Horovod1000
 
     # sbatch HVD_AECNN_1.sh
     sbatch HVD_AECNN_2.sh

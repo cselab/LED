@@ -3,7 +3,7 @@
 # module load cray-python/3.8.2.1
 # source ${HOME}/venv-python3.8-pytorch1.9/bin/activate
 
-# cd  /users/pvlachas/STF/Code/Methods/
+# cd  /users/pvlachas/LED/Code/Methods/
 
 import numpy as np
 

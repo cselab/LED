@@ -12,21 +12,21 @@ SYSTEM_NAME=cylRe100HR
 MODEL_NAME=GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_4-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1
 # for FIELD in "Evaluation_Data" "Figures" "Trained_Models"
 # do
-# mkdir -p /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-# rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/ /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+# mkdir -p /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+# rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/ /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
 # done
 
 FIELD=Evaluation_Data
 MODEL_NAME=GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_4-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/*.pickle /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/iterative_latent_forecasting_test.h5 /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/*.pickle /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/iterative_latent_forecasting_test.h5 /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
 
 
 SYSTEM_NAME=cylRe100HR
-mkdir -p /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/*.txt /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/*.pickle /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/*.h5 /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
+mkdir -p /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/*.txt /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/*.pickle /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/*.h5 /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
 
 
 
@@ -75,26 +75,26 @@ MODEL_NAME=GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L
 
 for FIELD in "Evaluation_Data" "Figures" "Trained_Models"
 do
-mkdir -p /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/ /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+mkdir -p /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/ /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
 done
 
 
 FIELD=Evaluation_Data
 MODEL_NAME=GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_10-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/*.pickle /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/iterative_latent_forecasting_test.h5 /scratch/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/*.pickle /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/iterative_latent_forecasting_test.h5 /scratch/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
 
 
-/scratch/snx3000/pvlachas/STF/Code/Results/cylRe1000HR/Evaluation_Data/GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_10-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1
+/scratch/snx3000/pvlachas/LED/Code/Results/cylRe1000HR/Evaluation_Data/GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_10-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1
 
 
 
 SYSTEM_NAME=cylRe1000HR
-mkdir -p /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/*.txt /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/*.pickle /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data/*.h5 /scratch/pvlachas/STF/Code/Data/${SYSTEM_NAME}/Data
+mkdir -p /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/*.txt /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/*.pickle /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data/*.h5 /scratch/pvlachas/LED/Code/Data/${SYSTEM_NAME}/Data
 
 
 
@@ -108,8 +108,8 @@ CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python3 RUN.py crnn  --mode plot --system_nam
 
 
 
-/scratch/pvlachas/STF/Code/Results/cylRe1000HR/Evaluation_Data/GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_10-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1
-/scratch/snx3000/pvlachas/STF/Code/Results/cylRe1000HR/Evaluation_Data/GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_10-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1/iterative_latent_forecasting_test.h5
+/scratch/pvlachas/LED/Code/Results/cylRe1000HR/Evaluation_Data/GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_10-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1
+/scratch/snx3000/pvlachas/LED/Code/Results/cylRe1000HR/Evaluation_Data/GPU-ARNN-SC_MinMaxZeroOne-OPT_adabelief-PREC_single-LR_0.001-NL_0.0-L2_0.0-RS_10-CNL_4-20-20-20-20-20-2-KRN_13-13-13-13-13-13-BN_1-TR_1-SI_2-PL_avg-ACT_celu-DKP_1.0-LD_10-PRETRAIN-AE_1-RS_21-C_lstm-R_1x32-SL_25-LFO_0-LFL_1/iterative_latent_forecasting_test.h5
 
 
 
@@ -123,7 +123,7 @@ CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python3 RUN.py crnn  --mode plot --system_nam
 [Config] RUNNING IN BARRY CLUSTER.
 [Config] HOME PATH = /home/pvlachas
 [Config] SCRATCH PATH = /scratch/pvlachas
-[Config] PROJECT PATH = /scratch/pvlachas/STF/Code
+[Config] PROJECT PATH = /scratch/pvlachas/LED/Code
 [RUN] Python : 3.8.3 (default, Jun 14 2020, 13:52:37)
 [GCC 10.1.0]
 [RUN] Torch  : 1.9.0+cu102

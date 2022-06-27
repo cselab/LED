@@ -6,8 +6,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --constraint=gpu
 #SBATCH --job-name=cylStudy_MA2P1_greasy_AECNN_RNN
-#SBATCH --output=/scratch/snx3000/pvlachas/STF/Code/Results/cylReLEDStudyHR/Logs/cylStudy_MA2P1_greasy_AECNN_RNN_outputfile_JID%j_A%a.txt
-#SBATCH --error=/scratch/snx3000/pvlachas/STF/Code/Results/cylReLEDStudyHR/Logs/cylStudy_MA2P1_greasy_AECNN_RNN_errorfile_JID%j_A%a.txt
+#SBATCH --output=/scratch/snx3000/pvlachas/LED/Code/Results/cylReLEDStudyHR/Logs/cylStudy_MA2P1_greasy_AECNN_RNN_outputfile_JID%j_A%a.txt
+#SBATCH --error=/scratch/snx3000/pvlachas/LED/Code/Results/cylReLEDStudyHR/Logs/cylStudy_MA2P1_greasy_AECNN_RNN_errorfile_JID%j_A%a.txt
 #SBATCH --gres=gpu:0,craynetwork:1
 
 # ======START=====
@@ -25,7 +25,7 @@ source ${HOME}/venv-python3.8-pytorch1.9/bin/activate
 export CRAY_CUDA_MPS=1
 export CUDA_VISIBLE_DEVICES=0
 export GPU_DEVICE_ORDINAL=0
-export GREASY_LOGFILE="/scratch/snx3000/pvlachas/STF/Code/Results/cylReLEDStudyHR/Logs/cylStudy_MA2P1_B"$1"_greasy_AECNN_RNN_logfile_JID"${SLURM_JOBID}".txt"
+export GREASY_LOGFILE="/scratch/snx3000/pvlachas/LED/Code/Results/cylReLEDStudyHR/Logs/cylStudy_MA2P1_B"$1"_greasy_AECNN_RNN_logfile_JID"${SLURM_JOBID}".txt"
 echo "GREASY - Running greasy tasks from "
 echo $PWD
 echo $GREASY_LOGFILE

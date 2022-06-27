@@ -7,6 +7,7 @@ CUDA_DEVICES=0
 random_seed_in_name=1
 
 max_epochs=50
+# max_epochs=10
 max_rounds=4
 overfitting_patience=5
 
@@ -67,9 +68,10 @@ system_name=FHN
 # mode=train
 # mode=debug
 mode=all
+# mode=plot
 # mode=test
 
-plotting=0
+plotting=1
 precision=double
 # precision=float
 

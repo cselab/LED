@@ -18,7 +18,7 @@ for MODEL_NAME in \
 "GPU-ARNN-scaler_MinMaxZeroOne-OPT_adabelief-LR_0.001-NL_0.0-L2_0.0-RS_10-AUTO_3x100-ACT_celu-DKP_1.0-LD_2-PRETRAIN-AE_1-RS_7-C_mlp-R_3x100-SL_25-LFO_1-LFL_1"
 do
 FIELD="Evaluation_Data"
-mkdir -p /scratch/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/ /scratch/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+mkdir -p /scratch/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/ /scratch/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
 done
 

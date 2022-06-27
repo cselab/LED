@@ -4,7 +4,7 @@
 SYSTEM_NAME=cylRe100
 # SYSTEM_NAME=cylRe1000
 
-cd ${HOME}/STF/Code/PostProcessing/LED
+cd ${HOME}/LED/Code/PostProcessing/LED
 
 ################################################
 ### Synchronize git (push local)
@@ -20,7 +20,7 @@ git push
 
 ssh barry << 'EOF'
 
-cd ${SCRATCH}/STF/Code/PostProcessing/LED
+cd ${SCRATCH}/LED/Code/PostProcessing/LED
 
     git stash save --keep-index
     git stash drop
@@ -43,12 +43,12 @@ EOF
 
 REMOTE_EXPERIMENT_NAME=None
 LOCAL_EXPERIMENT_NAME=Experiment_Barry
-mkdir -p /Users/pvlachas/STF/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
-rsync -mzarvP barry:/scratch/pvlachas/STF/Code/PostProcessing/LED/${SYSTEM_NAME}/${REMOTE_EXPERIMENT_NAME}/Data/ /Users/pvlachas/STF/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
+mkdir -p /Users/pvlachas/LED/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
+rsync -mzarvP barry:/scratch/pvlachas/LED/Code/PostProcessing/LED/${SYSTEM_NAME}/${REMOTE_EXPERIMENT_NAME}/Data/ /Users/pvlachas/LED/Code/PostProcessing/LED/${SYSTEM_NAME}/${LOCAL_EXPERIMENT_NAME}/Data
 
 
 
-cd ${HOME}/STF/Code/PostProcessing/LED
+cd ${HOME}/LED/Code/PostProcessing/LED
 
 python3 F3_field_wrt_multiscale_ratio.py ${SYSTEM_NAME} 0 1 ${LOCAL_EXPERIMENT_NAME}
 

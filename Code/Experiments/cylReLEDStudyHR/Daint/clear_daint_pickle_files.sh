@@ -6,7 +6,7 @@
 ################################################
 
 ssh daint << 'EOF'
-    cd /scratch/snx3000/pvlachas/STF/Code/Results/
+    cd /scratch/snx3000/pvlachas/LED/Code/Results/
 
     rm -rf ./*/*/*/autoencoder_testing_test_ic*_t*_target.pickle
 

@@ -75,8 +75,12 @@ if CLUSTER_NAME in ["local", "barry"]:
 FIGTYPE = "png"
 # FIGTYPE="pdf"
 
-from .. import Utils as utils
+# from .. import Utils as utils
 
+
+def getFigureDir(model, unformatted=False):
+    fig_dir = model.saving_path + model.fig_dir + model.model_name
+    return fig_dir
 
 def plotStateDistributionsSystemKS(model, results, set_name, testing_mode):
 
@@ -129,7 +133,7 @@ def plotStateDistributionsSystemKS(model, results, set_name, testing_mode):
             pathcoll.set_rasterized(True)
 
     fig.tight_layout()
-    fig_path = utils.getFigureDir(model) + "/{:}_ux_uxx_distr_{:}.{:}".format(
+    fig_path = getFigureDir(model) + "/{:}_ux_uxx_distr_{:}.{:}".format(
         testing_mode, set_name, FIGTYPE)
     plt.savefig(fig_path, dpi=300)
     plt.close()

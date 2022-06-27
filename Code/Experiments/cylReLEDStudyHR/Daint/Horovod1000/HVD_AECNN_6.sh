@@ -6,8 +6,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --constraint=gpu
 #SBATCH --job-name=cylStudy_HVD_AECNN
-#SBATCH --output=/scratch/snx3000/pvlachas/STF/Code/Results/cylReLEDStudyHR/Logs/cylStudy_HVD_AECNN_outputfile_JID%j_A%a.txt
-#SBATCH --error=/scratch/snx3000/pvlachas/STF/Code/Results/cylReLEDStudyHR/Logs/cylStudy_HVD_AECNN_errorfile_JID%j_A%a.txt
+#SBATCH --output=/scratch/snx3000/pvlachas/LED/Code/Results/cylReLEDStudyHR/Logs/cylStudy_HVD_AECNN_outputfile_JID%j_A%a.txt
+#SBATCH --error=/scratch/snx3000/pvlachas/LED/Code/Results/cylReLEDStudyHR/Logs/cylStudy_HVD_AECNN_errorfile_JID%j_A%a.txt
 #SBATCH --gres=gpu:0,craynetwork:1
 
 # ======START=====
@@ -62,7 +62,7 @@ random_seed=${random_seed}${batch_size}
 # mode=train
 # # mode=all
 
-cd /users/pvlachas/STF/Code/Methods/
+cd /users/pvlachas/LED/Code/Methods/
 
 system_name=cylRe1000HRLarge
 

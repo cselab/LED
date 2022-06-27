@@ -7,20 +7,20 @@ EXPERIMENT_NAME=Experiment_Daint_Large
 
 SYSTEM_NAME=cylReLEDStudyHR
 
-mkdir -p /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logs
+mkdir -p /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logs
 echo '###############		   COPY Logs			###############';
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/Logs/ /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logs
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/Logs/ /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logs
 
 
 for SYSTEM_NAME in cylRe1000HRLarge
 do
 
 echo '###############          COPY Logfiles            ###############';
-mkdir -p /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/Logfiles/ /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles 
+mkdir -p /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/Logfiles/ /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles 
 echo '###############          COPY Figures         ###############';
-mkdir -p /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures
-rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/Figures/ /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures 
+mkdir -p /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures
+rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/Figures/ /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures 
 done
 
 
@@ -30,11 +30,11 @@ done
 # do
 
 # echo '###############		   COPY Logfiles			###############';
-# mkdir -p /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles
-# rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/Logfiles/ /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles 
+# mkdir -p /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles
+# rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/Logfiles/ /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Logfiles 
 # echo '###############		   COPY Figures			###############';
-# mkdir -p /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures
-# rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/Figures/ /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures 
+# mkdir -p /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures
+# rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/Figures/ /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/Figures 
 # done
 
 
@@ -51,8 +51,8 @@ done
 # FIELD="Figures"
 # # FIELD="Evaluation_Data"
 # # FIELD="Trained_Models"
-# mkdir -p /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-# rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/"GPU-"${MODEL_NAME}/ /Users/pvlachas/STF/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/
+# mkdir -p /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+# rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/"GPU-"${MODEL_NAME}/ /Users/pvlachas/LED/Code/Results/${EXPERIMENT_NAME}/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}/
 # done
 
 
@@ -67,8 +67,8 @@ done
 # # FIELD="Evaluation_Data"
 # FIELD="Trained_Models"
 # GPU_MODEL_NAME="GPU-"${MODEL_NAME}
-# mkdir -p /Users/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-# rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${GPU_MODEL_NAME}/ /Users/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+# mkdir -p /Users/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+# rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${GPU_MODEL_NAME}/ /Users/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
 # done
 
 
@@ -83,8 +83,8 @@ done
 # # FIELD="Evaluation_Data"
 # FIELD="Trained_Models"
 # GPU_MODEL_NAME="GPU-"${MODEL_NAME}
-# mkdir -p /Users/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
-# rsync -mzarvP daint:/scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${GPU_MODEL_NAME}/ /Users/pvlachas/STF/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+# mkdir -p /Users/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
+# rsync -mzarvP daint:/scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${GPU_MODEL_NAME}/ /Users/pvlachas/LED/Code/Results/${SYSTEM_NAME}/${FIELD}/${MODEL_NAME}
 # done
 
 

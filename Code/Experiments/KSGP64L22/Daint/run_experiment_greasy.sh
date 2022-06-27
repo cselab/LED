@@ -1,7 +1,7 @@
 #!/bin/bash -l
 SYSTEM_NAME=KSGP64L22
 
-cd ${HOME}/STF/Code/Experiments/${SYSTEM_NAME}/Daint/Greasy
+cd ${HOME}/LED/Code/Experiments/${SYSTEM_NAME}/Daint/Greasy
 
 ################################################
 ### Create Tasks
@@ -29,7 +29,7 @@ python3 P0_greasy_AE_RNN_make_tasks.py
 ################################################
 ### Synchronize git (push local)
 ################################################
-cd $HOME/STF
+cd $HOME/LED
 git add .
 git commit -m "running system $SYSTEM_NAME"
 git push
@@ -40,7 +40,7 @@ git push
 ################################################
 
 ssh daint << 'EOF'
-	cd ${HOME}/STF
+	cd ${HOME}/LED
 	git stash save --keep-index
 	git stash drop
 	git pull
@@ -48,9 +48,9 @@ ssh daint << 'EOF'
 	SYSTEM_NAME=KSGP64L22
 
 	echo "PREPARING JOB..."
-	mkdir -p /scratch/snx3000/pvlachas/STF/Code/Results/${SYSTEM_NAME}/Logs
+	mkdir -p /scratch/snx3000/pvlachas/LED/Code/Results/${SYSTEM_NAME}/Logs
 
-	cd ${HOME}/STF/Code/Experiments/${SYSTEM_NAME}/Daint/Greasy
+	cd ${HOME}/LED/Code/Experiments/${SYSTEM_NAME}/Daint/Greasy
 
 
 
