@@ -33,7 +33,7 @@ Data for the Navier-Stokes flow past a cylinder have been generated using the in
 Due to the large data size, the data for this application are not uploaded here.
 
 
-# Dependencies (python 3.8)
+# Dependencies
 
 1. The code has been tested in python 3.8 & python3.9. Create virtual environment
 ```
@@ -48,5 +48,7 @@ source ./venv-led/bin/activate
 pip install -U pip
 pip install -r requirements.txt
 ```
+
+
 
 
