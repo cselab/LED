@@ -1,5 +1,14 @@
 #!/bin/bash
 
+############### NOTE #############################################
+# Make sure the AE is trained with the 4_AE.sh script.
+# The trained autoencoder is loaded here. The AE loaded
+# here has to have the same parametrization
+# as the pretrained autoencoder, else the script will complain
+# that it could not find the trained model,
+# so be careful to select the same hyper-parameters.
+##################################################################
+
 cd ../../../Methods
 
 CUDA_DEVICES=2

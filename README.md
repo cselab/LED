@@ -22,14 +22,16 @@ Once the data are generated, navigate to ./LED/Code/Experiments/FHN/Local and ru
 | 3_PCA_RNN.sh  | PCA/DiffMaps + RNN (LSTM/GRU)   |
 | 4_AE.sh  | Training a Convolutional Autoencoder (CNN)   |
 | 5_AE_RNN.sh  | LED (CNN+LSTM)   |
+| 5_AE_RC.sh  | LED (AE+RC)   |
 
 These scripts train and test the respective networks or dimensionality reduction methods, and generate plots and files with diagnostics in the ./LED/Results folder.
 
 # Data availability
 
 Scripts to generate the data for the FHN and the KS equations are provided in the ./Data folder.
-Data for the Navier-Stokes flow past a cylinder have been generated using the in-house software library, [CubismUP-2D](https://github.com/novatig/CubismUP_2D) (to be made public soon).
+Data for the Navier-Stokes flow past a cylinder have been generated using the in-house software library, [CubismUP-2D](https://github.com/novatig/CubismUP_2D) / [Cubism-AMR](https://arxiv.org/abs/2206.07345).
 Due to the large data size, the data for this application are not uploaded here.
+
 
 # Dependencies (python 3.8)
 
