@@ -101,16 +101,16 @@ print(np.shape(sequences))
 data_dir = "./Data/{:}".format(data_dir_str)
 os.makedirs(data_dir, exist_ok=True)
 
-# hf = h5py.File(data_dir + '/data.h5', 'w')
-# # Only a single sequence_example per dataset group
-# for seq_num_ in range(np.shape(sequences)[0]): # (960, 121, 202)
-#     # print('batch_{:010d}'.format(seq_num_))
-#     data_group = sequences[seq_num_]
-#     data_group = np.array(data_group)
-#     # print(np.shape(data_group))
-#     gg = hf.create_group('batch_{:010d}'.format(seq_num_))
-#     gg.create_dataset('data', data=data_group)
-# hf.close()
+hf = h5py.File(data_dir + '/data.h5', 'w')
+# Only a single sequence_example per dataset group
+for seq_num_ in range(np.shape(sequences)[0]): # (960, 121, 202)
+    # print('batch_{:010d}'.format(seq_num_))
+    data_group = sequences[seq_num_]
+    data_group = np.array(data_group)
+    # print(np.shape(data_group))
+    gg = hf.create_group('batch_{:010d}'.format(seq_num_))
+    gg.create_dataset('data', data=data_group)
+hf.close()
 
 data_dir_raw = "./Data/{:}_raw".format(data_dir_str)
 os.makedirs(data_dir_raw, exist_ok=True)
@@ -170,19 +170,19 @@ sequences = np.array(sequences)
 print("sequences.shape")
 print(np.shape(sequences))
 
-# data_dir = "./Data/{:}".format(data_dir_str)
-# os.makedirs(data_dir, exist_ok=True)
+data_dir = "./Data/{:}".format(data_dir_str)
+os.makedirs(data_dir, exist_ok=True)
 
-# hf = h5py.File(data_dir + '/data.h5', 'w')
-# # Only a single sequence_example per dataset group
-# for seq_num_ in range(np.shape(sequences)[0]): # (960, 121, 202)
-#     # print('batch_{:010d}'.format(seq_num_))
-#     data_group = sequences[seq_num_]
-#     data_group = np.array(data_group)
-#     # print(np.shape(data_group))
-#     gg = hf.create_group('batch_{:010d}'.format(seq_num_))
-#     gg.create_dataset('data', data=data_group)
-# hf.close()
+hf = h5py.File(data_dir + '/data.h5', 'w')
+# Only a single sequence_example per dataset group
+for seq_num_ in range(np.shape(sequences)[0]): # (960, 121, 202)
+    # print('batch_{:010d}'.format(seq_num_))
+    data_group = sequences[seq_num_]
+    data_group = np.array(data_group)
+    # print(np.shape(data_group))
+    gg = hf.create_group('batch_{:010d}'.format(seq_num_))
+    gg.create_dataset('data', data=data_group)
+hf.close()
 
 
 data_dir_raw = "./Data/{:}_raw".format(data_dir_str)
