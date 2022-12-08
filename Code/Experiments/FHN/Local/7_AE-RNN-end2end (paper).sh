@@ -193,74 +193,74 @@ mode=all
 
 
 
-# CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python3 RUN.py crnn \
-# --mode $mode \
-# --system_name $system_name \
-# --cudnn_benchmark $cudnn_benchmark \
-# --write_to_log $write_to_log \
-# --input_dim $input_dim \
-# --channels $channels \
-# --Dx $Dx \
-# --optimizer_str $optimizer_str \
-# --beta_vae $beta_vae \
-# --beta_vae_weight_max $beta_vae_weight_max \
-# --c1_latent_smoothness_loss $c1_latent_smoothness_loss \
-# --c1_latent_smoothness_loss_factor $c1_latent_smoothness_loss_factor \
-# --iterative_loss_validation $iterative_loss_validation \
-# --iterative_loss_schedule_and_gradient $iterative_loss_schedule_and_gradient \
-# --output_forecasting_loss $output_forecasting_loss \
-# --latent_forecasting_loss $latent_forecasting_loss \
-# --reconstruction_loss $reconstruction_loss \
-# --activation_str_general $activation_str_general \
-# --activation_str_output $activation_str_output \
-# --AE_convolutional $AE_convolutional \
-# --AE_batch_norm $AE_batch_norm \
-# --AE_conv_transpose $AE_conv_transpose \
-# --AE_pool_type $AE_pool_type \
-# --AE_conv_architecture $AE_conv_architecture \
-# --train_RNN_only $train_RNN_only \
-# --load_trained_AE $load_trained_AE \
-# --RNN_cell_type $RNN_cell_type \
-# --RNN_layers_num $RNN_layers_num \
-# --RNN_layers_size $RNN_layers_size \
-# --RNN_activation_str_output $RNN_activation_str_output \
-# --latent_state_dim $latent_state_dim  \
-# --sequence_length $sequence_length \
-# --prediction_length $prediction_length \
-# --scaler $scaler \
-# --learning_rate $learning_rate \
-# --weight_decay $weight_decay \
-# --dropout_keep_prob $dropout_keep_prob \
-# --noise_level $noise_level \
-# --batch_size $batch_size \
-# --overfitting_patience $overfitting_patience \
-# --max_epochs $max_epochs \
-# --max_rounds $max_rounds \
-# --num_test_ICS $num_test_ICS \
-# --prediction_horizon $prediction_horizon \
-# --display_output 1 \
-# --random_seed $random_seed \
-# --random_seed_in_name $random_seed_in_name \
-# --teacher_forcing_forecasting 1 \
-# --iterative_state_forecasting 1 \
-# --iterative_latent_forecasting 1 \
-# --iterative_propagation_during_training_is_latent $iterative_propagation_during_training_is_latent \
-# --make_videos $make_videos \
-# --retrain $retrain \
-# --compute_spectrum 0 \
-# --plot_state_distributions 1 \
-# --plot_system 1 \
-# --plot_latent_dynamics 1 \
-# --truncate_data_batches $truncate_data_batches \
-# --plot_testing_ics_examples $plot_testing_ics_examples \
-# --test_on_test 1 \
-# --n_warmup_train $n_warmup_train \
-# --n_warmup $n_warmup \
-# --latent_space_scaler $latent_space_scaler \
-# --precision $precision \
-# --reference_train_time 20. \
-# --buffer_train_time 1.0 \
-# --test_on_test 1
+CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python3 RUN.py crnn \
+--mode $mode \
+--system_name $system_name \
+--cudnn_benchmark $cudnn_benchmark \
+--write_to_log $write_to_log \
+--input_dim $input_dim \
+--channels $channels \
+--Dx $Dx \
+--optimizer_str $optimizer_str \
+--beta_vae $beta_vae \
+--beta_vae_weight_max $beta_vae_weight_max \
+--c1_latent_smoothness_loss $c1_latent_smoothness_loss \
+--c1_latent_smoothness_loss_factor $c1_latent_smoothness_loss_factor \
+--iterative_loss_validation $iterative_loss_validation \
+--iterative_loss_schedule_and_gradient $iterative_loss_schedule_and_gradient \
+--output_forecasting_loss $output_forecasting_loss \
+--latent_forecasting_loss $latent_forecasting_loss \
+--reconstruction_loss $reconstruction_loss \
+--activation_str_general $activation_str_general \
+--activation_str_output $activation_str_output \
+--AE_convolutional $AE_convolutional \
+--AE_batch_norm $AE_batch_norm \
+--AE_conv_transpose $AE_conv_transpose \
+--AE_pool_type $AE_pool_type \
+--AE_conv_architecture $AE_conv_architecture \
+--train_RNN_only $train_RNN_only \
+--load_trained_AE $load_trained_AE \
+--RNN_cell_type $RNN_cell_type \
+--RNN_layers_num $RNN_layers_num \
+--RNN_layers_size $RNN_layers_size \
+--RNN_activation_str_output $RNN_activation_str_output \
+--latent_state_dim $latent_state_dim  \
+--sequence_length $sequence_length \
+--prediction_length $prediction_length \
+--scaler $scaler \
+--learning_rate $learning_rate \
+--weight_decay $weight_decay \
+--dropout_keep_prob $dropout_keep_prob \
+--noise_level $noise_level \
+--batch_size $batch_size \
+--overfitting_patience $overfitting_patience \
+--max_epochs $max_epochs \
+--max_rounds $max_rounds \
+--num_test_ICS $num_test_ICS \
+--prediction_horizon $prediction_horizon \
+--display_output 1 \
+--random_seed $random_seed \
+--random_seed_in_name $random_seed_in_name \
+--teacher_forcing_forecasting 1 \
+--iterative_state_forecasting 1 \
+--iterative_latent_forecasting 1 \
+--iterative_propagation_during_training_is_latent $iterative_propagation_during_training_is_latent \
+--make_videos $make_videos \
+--retrain $retrain \
+--compute_spectrum 0 \
+--plot_state_distributions 1 \
+--plot_system 1 \
+--plot_latent_dynamics 1 \
+--truncate_data_batches $truncate_data_batches \
+--plot_testing_ics_examples $plot_testing_ics_examples \
+--test_on_test 1 \
+--n_warmup_train $n_warmup_train \
+--n_warmup $n_warmup \
+--latent_space_scaler $latent_space_scaler \
+--precision $precision \
+--reference_train_time 20. \
+--buffer_train_time 1.0 \
+--test_on_test 1
 
 
 
@@ -284,13 +284,13 @@ mode=all
 truncate_timesteps=0
 
 # the prediction horizon
-prediction_horizon=4
+prediction_horizon=8000
 
 # the number of steps to warm up the hidden state of the RNN
-n_warmup=2
+n_warmup=20
 
 # the number of testing initial conditions
-num_test_ICS=1
+num_test_ICS=10
 
 # the mode to use, either multiscale, or plotMultiscale to plot the results
 mode=multiscale
@@ -308,10 +308,13 @@ plot_latent_dynamics=0
 CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python3 RUN.py \
 --multiscale_testing 1 \
 --plot_multiscale_results_comparison $plot_multiscale_results_comparison \
---multiscale_micro_steps_list 1 \
---multiscale_macro_steps_list 0 \
---multiscale_macro_steps_list 3 \
+--multiscale_micro_steps_list 10 \
+--multiscale_macro_steps_list 10 \
+--multiscale_macro_steps_list 50 \
 --multiscale_macro_steps_list 100 \
+--multiscale_macro_steps_list 200 \
+--multiscale_macro_steps_list 1000 \
+--multiscale_macro_steps_list 8000 \
 crnn \
 --mode $mode \
 --system_name $system_name \
